@@ -1,12 +1,26 @@
 # Uhella: Quick Start Guide & User Manual 📸✨
 
-Welcome to **Uhella** — an AI-powered personal photo discovery app. Think of it as a personalized, TikTok-style endless feed for your own photo collection. Its primary goal isn't to be a rigid photo organizer, but rather to help you rediscover your memories through a uniquely tailored "AI Taste" that adapts to what captures your attention.
+Welcome to **Uhella** — an AI-powered personal photo discovery app available on iOS and macOS. Think of it as a personalized, TikTok-style endless feed for your own photo collection. Its primary goal isn't to be a rigid photo organizer, but rather to help you rediscover your memories through a uniquely tailored "AI Taste" that adapts to what captures your attention.
+
+---
+
+## 🌟 Why Uhella? (Use Cases)
+
+**1. Rediscover Lost Memories**
+You likely have thousands of photos sitting on your phone that you haven't viewed in ages. With Uhella, the app will automatically surface these forgotten moments. Rather than sorting rigidly by date, place, or event—or displaying them completely randomly—Uhella learns what you like and dislike. It feeds you photos dynamically, actively trying to surface the best of your entire collection.
+
+**2. Share Your "Taste", Not Your Photos**
+In the non-AI era, we shared specific videos, photos, or text. Now, we can share our *Taste* (technically your unique "self-score" model). Because Uhella determines what photos are "good" based on your local interactions, you can share this profile with friends. When they load your Taste into their app, Uhella will rate their local photos based on *your* preferences. This allows you to compare aesthetics and "rate" each other's hidden collections honestly and privately, without ever seeing or sharing the raw photos themselves.
 
 ---
 
 ## 🚀 Getting Started
 
 When you launch the app, you dive straight into discovering your memories. The interface is purposefully minimal to let the photos shine.
+
+### Installation / Download Links
+* **iOS (iPhone/iPad):** [Download Uhella on the App Store](https://apps.apple.com/us/app/uhella/id6737429973)
+* **macOS:** [Download Uhella on the Mac App Store](https://apps.apple.com/my/app/uhella/id6737429973?platform=mac)
 
 ### Quick Create
 For users who want to jump straight to making something beautiful, we offer the **Quick Create** workflow. 
@@ -43,7 +57,7 @@ Navigating between photos and pages is entirely gesture-based, matching intuitiv
 
 From the main menu (and accessible via Quick Create), you can take action on your rediscovered memories:
 
-1. **Search Similar Photos:** Select a reference photo, and the AI will scan your library to find visually similar photos.
+1. **Search Similar Photos:** Select a reference photo, and the AI will scan your library to find visually similar photos. You can even use the **Crop Search** feature to focus the AI on a specific subject or object within a photo!
 2. **Generate Video:** Select a batch of images and the app will process and stitch them into a beautiful, shareable photo slideshow video.
 3. **Generate Collage:** Effortlessly group memories together into aesthetic grid-based collages.
 
