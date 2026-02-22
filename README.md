@@ -57,7 +57,7 @@ Navigating between photos and pages is entirely gesture-based, matching intuitiv
 
 From the main menu (and accessible via Quick Create), you can take action on your rediscovered memories:
 
-1. **Search Similar Photos:** Select a reference photo, and the AI will scan your library to find visually similar photos. You can even use the **Crop Search** feature to focus the AI on a specific subject or object within a photo!
+1. **Create Taste:** Select multiple photos from your library and provide direct feedback (**Love, Like, or Neutral**) for each. The AI scans your entire library and uses these signals to fine-tune your unique AI Taste. You can even use the **Crop Search** feature to focus the AI on specific subjects within your training photos!
 2. **Generate Video:** Select a batch of images and the app will process and stitch them into a beautiful, shareable photo slideshow video.
 3. **Generate Collage:** Effortlessly group memories together into aesthetic grid-based collages.
 
