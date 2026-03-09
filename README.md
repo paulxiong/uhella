@@ -1,5 +1,7 @@
 # Uhella: Quick Start Guide & User Manual 📸✨
 
+https://youtu.be/e03lexMLSq0
+
 Welcome to **Uhella** — an AI-powered personal photo discovery app available on iOS and macOS. Think of it as a personalized, TikTok-style endless feed for your own photo collection. Its primary goal isn't to be a rigid photo organizer, but rather to help you rediscover your memories through a uniquely tailored "AI Taste" that adapts to what captures your attention.
 
 ---
