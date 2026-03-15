@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taste：运行在你手机上的、真正属于你的个性化推荐引擎</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3d;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #7c6fcd;
+      --accent2: #38bdf8;
+      --code-bg: #13151f;
+      --table-header: #1e2234;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.85;
+      padding: 0;
+    }
+
+    .wrapper {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 32px 120px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #e2e8f0 0%, var(--accent2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 64px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent2);
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+
+    p { margin-bottom: 20px; }
+
+    strong { color: #f1f5f9; }
+
+    em { color: var(--muted); font-style: normal; }
+
+    a { color: var(--accent2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    blockquote {
+      border-left: 3px solid var(--accent);
+      background: var(--surface);
+      margin: 0 0 28px 0;
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    blockquote p { margin: 0; }
+
+    code {
+      font-family: "JetBrains Mono", "Fira Code", Menlo, Monaco, monospace;
+      font-size: 0.85em;
+      background: var(--code-bg);
+      color: #a5b4fc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+      overflow-x: auto;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      color: #cbd5e1;
+      font-size: 0.875rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 56px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 28px;
+      font-size: 0.92rem;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    thead tr { background: var(--table-header); }
+
+    th {
+      text-align: left;
+      padding: 12px 16px;
+      font-weight: 600;
+      color: var(--accent2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+
+    ul, ol {
+      margin: 0 0 20px 24px;
+    }
+
+    li { margin-bottom: 6px; }
+    li code { font-size: 0.82em; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Taste：运行在你手机上的、真正属于你的个性化推荐引擎</h1>
+<blockquote>
+<p>深入解析一个完全在本地训练的照片推荐系统——它在 iPhone 上训练，毫秒级响应，还能把你的审美打包成一个文件发给朋友。</p>
+</blockquote>
+<hr />
+<h2>你从未真正拥有过推荐算法</h2>
+<p>今天所有主流推荐系统都是运行在别人服务器上的黑盒。它了解你的行为，但你无法审查它、重置它、导出它，更别说把它送给朋友。模型是平台的资产——不是你的。</p>
+<p><strong>Taste</strong> 颠覆了这一切。模型住在你的设备上。它从你的点击中学习。它是一个你可以导出、分享、导入和版本管理的文件。而且它足够快——每一次点赞都会实时触发一次训练。</p>
+<p>本文将完整拆解这套架构：Transformer 如何针对端侧约束进行设计、为什么"点击即标注"能作为训练信号、信息流如何像强化学习智能体一样在随机探索和 AI 利用之间切换，以及"审美共享"究竟是一个怎样的全新原语。</p>
+<hr />
+<h2>系统架构总览</h2>
+<pre><code>用户点击
+    │
+    ▼
+TapTracker          ← 记录每张被点赞的照片（最新优先队列）
+    │
+    ▼
+ExposureTracker     ← 记录每张被展示的照片（跳过 = 隐式负样本）
+    │
+    ├── 正样本目标：被点击的照片
+    └── 负样本：12 张最近被跳过的照片
+    │
+    ▼
+Training Isolate    ← 后台 Dart 隔离线程，永不阻塞 UI
+    │
+    ▼
+TransformerModel    ← 256 维端侧 Transformer，更新 _outputProjection
+    │
+    ▼
+ModelWeights DB     ← gzip 压缩的 int8/f32 混合格式，约 3-4 MB
+    │
+    ├── 推理路径 → 余弦相似度 → 每张照片的自评分
+    └── 快照路径 → 导出为 .taste 文件，分享给朋友
+</code></pre>
+<hr />
+<h2>Transformer：为移动端约束而生的设计</h2>
+<h3>降维：核心权衡</h3>
+<p>系统的输入是每张照片的 <strong>2048 维 ResNet50 特征向量</strong>。在手机上以 2048 维运行完整 Transformer 是不现实的——光是注意力矩阵就需要 2048×2048×4 头 = 6400 万参数，仅一层就已如此。</p>
+<p>解决方案是<strong>瓶颈投影</strong>：</p>
+<pre><code>照片 Embedding（2048 维）
+        │
+        ▼  _inputProjection  [2048 × 256]
+内部表示（iOS 256 维，Android 512 维）
+        │
+        ▼  多头自注意力（4 头）
+        │
+        ▼  前馈网络（iOS 2× 隐藏层，Android 4×）
+        │
+        ▼  _outputProjection  [256 × 2048]
+预测输出（2048 维，与输入同空间）
+</code></pre>
+<p>这将工作内存从约 64MB（未压缩）压缩到约 12MB，量化后进一步压缩至 3–4MB。核心洞察在于：<strong>不必在 2048 维上完成所有"思考"</strong>——压缩、推理、再还原。</p>
+<h3>两个投影矩阵并不对称</h3>
+<p><code>_inputProjection</code> 和 <code>_outputProjection</code> 不是彼此的转置，而是独立学习的：</p>
+<ul>
+<li><code>_inputProjection</code> 学习从 ResNet 特征中提取<strong>语义上有用的维度</strong></li>
+<li><code>_outputProjection</code> 是<strong>主要的可训练权重</strong>——它学习将 Transformer 内部输出映射回用户喜好对应的 Embedding 区域</li>
+</ul>
+<p>这种不对称是有意为之。在正常训练路径（<code>trainOnBatch</code>）中，<strong>只有 <code>_outputProjection</code> 被更新</strong>。注意力权重和 FFN 权重保持冻结。这是一个刻意的设计决策：注意力机制作为序列上的<strong>固定特征提取器</strong>，而输出投影则是被用户行为塑造的可学习"品味头"。</p>
+<h3>残差连接：锚定在 ImageNet 空间</h3>
+<p>推理输出应用了一个关键残差：</p>
+<pre><code class="language-dart">final_output[i] = inputVector[i] + 0.5 * purePrediction[i]
+</code></pre>
+<p>这意味着模型永远不会预测一个完全任意的 Embedding。它始终<strong>50% 锚定在输入照片自身的 Embedding 上</strong>。学习到的部分（<code>purePrediction</code>）提供一个<em>增量</em>——从当前照片在语义空间中所处的位置，向你倾向喜欢的方向推一把。</p>
+<p>为什么这很重要？ResNet50 的 Embedding 在 ImageNet 上训练，具有特定的几何结构——相邻点是语义相似的图像。如果模型可以自由预测任意 2048 维向量，它可能完全逃离这一几何结构，产生不对应任何真实图像概念的预测。残差连接阻止了这一点，使每个预测都在原始 Embedding 空间内保持可解释性。</p>
+<p>训练目标正是对此的直接体现：</p>
+<pre><code>目标：input + 0.5 * purePrediction ≈ target
+因此训练方向：purePrediction ≈ (target - input) / 0.5
+</code></pre>
+<h3>数值安全无处不在</h3>
+<p>在没有服务端兜底的端侧训练中，每一步都需要显式的数值边界：</p>
+<table>
+<thead>
+<tr>
+<th>保护措施</th>
+<th>值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>权重截断</td>
+<td>±5.0</td>
+<td>防止多次点击后权重爆炸</td>
+</tr>
+<tr>
+<td>误差截断</td>
+<td>±5.0</td>
+<td>防止单步灾难性更新</td>
+</tr>
+<tr>
+<td>梯度截断</td>
+<td>±1.0</td>
+<td>限制单个梯度值的范围</td>
+</tr>
+<tr>
+<td>exp() 输入截断</td>
+<td>±50.0</td>
+<td>防止 softmax 中出现 NaN</td>
+</tr>
+<tr>
+<td>tanh() 输入截断</td>
+<td>±10.0</td>
+<td>防止 GELU 中的饱和</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>"点击即一切"：训练哲学</h2>
+<h3>一次点击，一次训练</h3>
+<p>整个训练流程归结为一个原则：<strong>每次点赞就是一个有监督的训练样本</strong>。不需要显式标注，不需要人工打标，不需要定期批量任务。用户的点击<em>就是</em>标签。</p>
+<p>当用户在看过照片 <strong>A、B、C</strong> 之后点击了照片 <strong>T</strong>：</p>
+<ul>
+<li><strong>目标 Embedding</strong>：照片 T 的 ResNet50 特征向量</li>
+<li><strong>输入序列</strong>：[C, B, A]（最新优先，最多 10 张）</li>
+<li><strong>负样本</strong>：用户在两次点击之间滑过的最多 12 张照片（来自 ExposureTracker）</li>
+</ul>
+<p>模型被训练回答这个问题：<em>"基于我喜欢过的照片序列，预测我下一张会喜欢的照片的 Embedding。"</em></p>
+<h3>为什么跳过的照片很有价值</h3>
+<p>ExposureTracker 在内存中维护一个最多 400 张已展示照片的队列。两次点击之间——那些用户看过但没有点赞的照片——是<strong>隐式负样本</strong>。它们不是随机噪声；它们来自用户真实的相册，是用户主动选择跳过的。</p>
+<p>这使它们成为<strong>难负样本</strong>：这些照片可能与被点赞的内容相似（来自同一相册、在同一会话中展示），但用户明确地掠过了它们。针对这些样本训练，比针对互联网上的随机图像训练产生更锐利的决策边界。</p>
+<h3>余弦相似度作为损失函数</h3>
+<p>损失函数非常简洁：</p>
+<pre><code>loss = 1.0 - cosine_similarity(prediction, target)
+</code></pre>
+<p>范围：0（完美）到 2（完全相反）。这是归一化 Embedding 空间中的余弦损失，有清晰的几何解释：<strong>将模型的输出向量在单位超球面上向目标方向推进</strong>。</p>
+<p>梯度目标是从残差关系计算的"纯预测"：</p>
+<pre><code>desiredPure = (target - input) / 0.5
+</code></pre>
+<p>然后误差 = <code>desiredPure - currentPure</code>，截断至 ±5.0，通过秩-1 外积更新来更新 <code>_outputProjection</code>：</p>
+<pre><code>ΔW[j,i] = error[i] × reducedPrediction[j] × scale
+</code></pre>
+<p>其中 <code>scale = lr / (||reducedPrediction|| × 10)</code>。分母通过激活值的模来归一化更新量，防止大激活值导致成比例的大权重变化。</p>
+<h3>在后台隔离线程中训练</h3>
+<p>Flutter 的 Dart 运行时在每个 Isolate 中是单线程的。在主线程上运行 50 个 epoch 的矩阵乘法会掉帧。整个训练流程运行在一个<strong>专用的后台 Isolate</strong> 中——一个拥有独立内存空间的 Dart 执行上下文。</p>
+<p>通信通过类型化消息传递进行：</p>
+<pre><code>主 Isolate                       训练 Isolate
+     │                                 │
+     │─── TrainingMessage ────────────►│
+     │    (targetAssetId,              │
+     │     inputSequence,              │  trainOnBatch()
+     │     negativeAssetIds)           │  _updateWeights()
+     │                                 │  saveWeights()
+     │◄── TrainingResult ─────────────│
+     │    (weightUpdated, steps)       │
+     │                                 │
+     ▼                                 │
+reloadWeights()                        │
+invalidateCache()                      │
+emitTasteUpdate()                      │
+</code></pre>
+<p>UI 永不等待训练完成。训练结果异步到达，触发缓存失效和推荐刷新。</p>
+<hr />
+<h2>自评分：一张照片如何知道你会喜欢它</h2>
+<h3>推理路径</h3>
+<p>基于用户最近的点击历史，模型预测一个表示"我接下来想看什么"的 Embedding 向量。自评分衡量任何给定照片与该预测的接近程度：</p>
+<pre><code>1. 获取点击序列：[photo_n, photo_{n-1}, ..., photo_{n-9}]
+2. 运行 predict(sequence) → predicted_embedding（2048 维）
+3. 对候选照片 C（Embedding 为 E_C）：
+   self_score = cosine_similarity(predicted_embedding, E_C)
+</code></pre>
+<p>自评分高于 0.60 意味着该照片很可能被推荐。低于 0.60，它留在随机信息流中。</p>
+<h3>自评分作为实时反馈信号</h3>
+<p>随着用户上下文的变化，自评分被动态计算。每次点赞后，点击序列更新，模型更新（通过训练），整个照片库的自评分随之变化。这创造了一个<strong>可以按照片可视化的实时偏好信号</strong>。</p>
+<p>这与静态排名在本质上不同。这个分数不是"系统认为你会喜欢这张"——而是"基于你最近 10 次点赞，模型预测的内容与这张照片有多接近"。</p>
+<hr />
+<h2>随机信息流 vs AI 信息流：伪装成 RL 的探索-利用</h2>
+<h3>两个信息流，一个目的</h3>
+<p>应用维护两种信息流模式：</p>
+<ul>
+<li><strong>随机信息流</strong>：不考虑模型预测，随机采样照片。<strong>探索（Exploration）</strong>。</li>
+<li><strong>AI 信息流</strong>：按自评分 ≥ 0.60 过滤，按预测相似度排序。<strong>利用（Exploitation）</strong>。</li>
+</ul>
+<p>这正是强化学习中经典的<strong>探索-利用困境</strong>的镜像。</p>
+<h3>为什么两者都需要</h3>
+<p>纯 AI 信息流有一个众所周知的失效模式：<strong>过滤气泡</strong>。模型从用户点赞的内容中学习，然后展示更多类似内容，这些内容被点赞，使模型越来越窄。你收敛到一个局部最优解，而这未必是真正的全局偏好。</p>
+<p>纯随机信息流有相反的问题：大多数照片不相关，用户注意力无法被捕获，系统感觉毫无用处。</p>
+<p>双信息流架构通过将两者视为互补来解决这一问题：</p>
+<pre><code>随机信息流                     AI 信息流
+─────────────                  ─────────────
+&quot;向远处走&quot;                     &quot;向近处靠&quot;
+探索                           利用
+发现新内容                     强化偏好
+训练信号多样性                  训练信号密度
+产生隐式负样本                  产生高价值正样本
+</code></pre>
+<p>当用户浏览随机信息流而不点击 → 他们在<strong>划定边界</strong>（不喜欢什么）。当他们浏览 AI 信息流并点击 → 他们在<strong>强化中心</strong>（品味的核心）。</p>
+<h3>切换逻辑</h3>
+<p>系统从随机信息流开始，一旦模型得到有意义的训练，就切换到 AI 信息流：</p>
+<pre><code>切换到 AI 信息流的条件：
+  trainingSteps &gt; 0              ← 模型至少训练过一次
+  存在有效点击序列              ← 有足够的上下文用于预测
+  存在推荐结果                  ← 至少有一张照片超过 0.60 阈值
+  ExposureTracker 有负样本      ← 有足够的跳过照片用于对比
+</code></pre>
+<p>如果 AI 信息流耗尽（没有照片超过阈值），系统自动回退到随机信息流。这防止了最糟糕的 UX 失败：给用户展示空白页面。</p>
+<h3>RL 框架映射</h3>
+<p>可以这样理解：</p>
+<table>
+<thead>
+<tr>
+<th>RL 概念</th>
+<th>在本系统中</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>智能体</td>
+<td>推荐模型</td>
+</tr>
+<tr>
+<td>状态</td>
+<td>用户当前的点击序列</td>
+</tr>
+<tr>
+<td>动作</td>
+<td>向用户展示这张照片</td>
+</tr>
+<tr>
+<td>奖励</td>
+<td>用户点击（正向）或跳过（负向）</td>
+</tr>
+<tr>
+<td>策略</td>
+<td>AI 信息流（对已学偏好的利用）</td>
+</tr>
+<tr>
+<td>探索</td>
+<td>随机信息流（发现新偏好区域）</td>
+</tr>
+<tr>
+<td>价值函数</td>
+<td>自评分（点击概率的估计）</td>
+</tr>
+</tbody>
+</table>
+<p>系统并未实现正式的强化学习（没有 Q-learning，没有策略梯度），但双信息流结构捕捉了本质动态。随机信息流探索照片空间、收集奖励信号（点击和跳过），AI 信息流利用已学到的内容。</p>
+<p>使这一切奏效的关键架构决策：<strong>每一张被展示的照片——包括随机信息流中的照片——都被追踪为潜在的负样本</strong>。ExposureTracker 不区分 AI 信息流和随机信息流的曝光。两者都在共同定义品味。</p>
+<hr />
+<h2>Taste 作为可共享的文件</h2>
+<h3>模型就是品味</h3>
+<p>因为整个个性化状态存储在约 3-4MB 的文件中（gzip 压缩的 int8/f32 混合权重），将品味视为可转移的产物就变得自然而然：</p>
+<pre><code class="language-json">{
+  &quot;snapshot_name&quot;: &quot;1234_3000&quot;,
+  &quot;model_name&quot;: &quot;transformer&quot;,
+  &quot;weights&quot;: &quot;&lt;base64_encoded_binary&gt;&quot;,
+  &quot;weights_encoding&quot;: &quot;base64:int8_gzip&quot;,
+  &quot;training_steps&quot;: 3000,
+  &quot;pinned&quot;: 1
+}
+</code></pre>
+<p>导入这个文件 → 立刻通过别人的审美镜头浏览。你的信息流会围绕他们训练过的偏好重新组织。</p>
+<h3>快照版本管理</h3>
+<p>系统维护完整的品味快照历史，以 4 位代码加训练步数命名（如 <code>1234_3000</code>）。你可以：</p>
+<ul>
+<li><strong>固定</strong>一个喜欢的品味（不被继续训练覆盖）</li>
+<li><strong>即时切换</strong>不同品味（只需激活不同快照）</li>
+<li><strong>导出</strong>任意快照为 <code>.taste</code> 文件</li>
+<li><strong>导入</strong>朋友的品味，通过他们的眼睛浏览</li>
+</ul>
+<p>这创造了一个全新的社交原语：<strong>不依赖社交图谱的审美共享</strong>。你不是在关注一个人——你是在暂时借居他们训练过的模型。</p>
+<h3>"3000 训练步"意味着什么</h3>
+<p>快照名称中编码的训练步数提供了品味"成熟度"的粗略信号：</p>
+<ul>
+<li><strong>0 步</strong>：全新模型，随机权重。随机信息流主导。</li>
+<li><strong>50–200 步</strong>：品味初步形成。AI 信息流开始出现。</li>
+<li><strong>1000+ 步</strong>：稳定审美。高置信度推荐。</li>
+<li><strong>5000+ 步</strong>：高度专精。品味窄但精准。</li>
+</ul>
+<p>你可以通过训练步数来评估导入的品味是否有足够的信号值得使用。</p>
+<hr />
+<h2>权重序列化：混合量化</h2>
+<h3>为什么不全用 int8？</h3>
+<p>投影矩阵（<code>_inputProjection</code> 和 <code>_outputProjection</code>）是模型中最敏感的权重。它们处理 2048↔256 的维度桥接。将它们量化为 int8 会在维度转换处引入舍入误差，这些误差在每次推理中累积。</p>
+<p>注意力权重和 FFN 权重完全在 256 维空间内运算，对量化噪声的容忍度要高得多。注意力分数上的小误差只会导致值的加权平均上出现小误差——softmax 和残差连接起到自然的平滑作用。</p>
+<h3>混合格式</h3>
+<pre><code>InputProjection:  float32  （2048 × 256 × 4 字节 = 2.1 MB）
+OutputProjection: float32  （256 × 2048 × 4 字节 = 2.1 MB）
+QueryWeights:     int8     （256 × 256 × 1 字节 = 65 KB）
+KeyWeights:       int8     （65 KB）
+ValueWeights:     int8     （65 KB）
+OutputWeights:    int8     （65 KB）
+FFN1:             int8     （256 × 512 × 1 字节 = 131 KB）
+FFN2:             int8     （131 KB）
+
+gzip 前：约 4.7 MB
+gzip 后：约 2-3 MB
+</code></pre>
+<p>逐张量量化为每个张量使用独立的缩放因子：</p>
+<pre><code>scale = max_abs_value / 127.0
+quantized = round(value / scale).clamp(-127, 127)
+</code></pre>
+<p>这比全局量化好得多——一个值都在 0.01 附近的张量会获得自己的缩放比例，而不是被值在 5.0 附近的张量的缩放比例所淹没。</p>
+<hr />
+<h2>为什么这个设计是独特的</h2>
+<h3>1. 模型是你的</h3>
+<p>中心化推荐引擎在数百万用户的聚合数据上训练。你的信号被所有人稀释。Taste 模型<strong>只在你的点击上、只在你的设备上</strong>训练。没有任何用户的行为会影响另一个用户的模型。</p>
+<h3>2. 即时反馈闭环</h3>
+<p>训练到推理的闭环在毫秒内完成。你点赞一张照片 → 训练在后台触发 → 几秒内，你的信息流已经改变。这比任何服务端系统（通常有数小时或数天的推荐更新延迟）都更紧密。</p>
+<h3>3. 可组合的审美单元</h3>
+<p>快照使品味具有<strong>可组合性</strong>。你可以在建筑摄影上训练一个品味并导出，然后在食物摄影上训练另一个品味并切换。每个快照都是对同一张照片库的不同审美滤镜。</p>
+<h3>4. 架构即隐私</h3>
+<p>没有遥测路径。模型不与任何服务器通信。训练在本地发生，权重保留在本地，共享是一个主动的行为（你显式导出并发送文件）。隐私不是一项政策——它是一个结构性属性。</p>
+<h3>5. 随机与 AI 信息流的 RL 二元性</h3>
+<p>大多数推荐系统只有一个信息流，探索-利用权衡被内置在一个单一的排序列表中。将它们分离成两种不同模式，使这种权衡<strong>可见且可控</strong>。用户不需要理解强化学习——他们只知道"这个信息流让我意外"和"这个信息流了解我"。</p>
+<hr />
+<h2>局限性与开放问题</h2>
+<p><strong>注意力权重在正常训练中是冻结的。</strong> 每次点击只更新 <code>_outputProjection</code>。这意味着注意力机制——那个本可以学习<em>如何组合</em>一系列点赞照片的部分——永远不会专门化到用户。它保持在随机初始化状态。这是一个有意的权衡（训练更简单，更新的参数更少），但它限制了表达能力。</p>
+<p><strong>序列上下文是浅层的。</strong> 模型只能看到 10 次之前的点击。这对于会话内的短期偏好已足够，但无法捕捉更长期的审美弧线（你一月和七月的品味差异）。</p>
+<p><strong>没有跨设备同步。</strong> 模型存在于你训练它的设备上。跨设备共享需要显式的快照导出/导入。</p>
+<p><strong>iOS GPU 训练已禁用。</strong> 原生 Metal/MPS 路径本意是加速训练，但因为它实现的简化线性模型与 Dart Transformer 架构不兼容而被禁用——通过错误梯度更新投影权重会降低非目标照片的评分。正确的修复方案（在 Metal 中完整复现 Transformer）足够复杂，暂时搁置。</p>
+<hr />
+<h2>总结</h2>
+<p>Taste 系统是对一个特定架构论点的押注：</p>
+<blockquote>
+<p><strong>一个小型的端侧 Transformer，纯粹在用户点击上训练，使用隐式负采样，运行在一个充当探索-利用循环的双模式信息流中，能产生一个私密、快速且可导出的个性化推荐引擎。</strong></p>
+</blockquote>
+<p>这些组件单独来看都是众所周知的：Transformer、余弦相似度搜索、RL 式探索。新颖之处在于它们的组合——尤其是将模型作为<strong>用户拥有、版本化和共享的一等公民产物</strong>，而非平台遥测数据的副产品。</p>
+<p>这个 3-4MB 的品味文件不只是一个模型检查点。它是一个人在某一时刻审美的压缩表示，小到可以放进一条短信。</p>
+<hr />
+<p><em>本文所有代码均来自端侧 Transformer 实现：<code>lib/helpers/transformer_model.dart</code>、<code>lib/helpers/isolate_trainer.dart</code> 和 <code>lib/helpers/transformer_manager_with_isolate.dart</code>。</em></p>
+  </div>
+</body>
+</html>
