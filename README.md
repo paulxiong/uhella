@@ -75,6 +75,8 @@ When Uhella has photos or videos ready to move, it can send a Telegram notificat
 
 Uhella Backend lives in the **macOS menu bar**. That is your control center.
 
+![Uhella Backend menu](menu.png)
+
 Common options include:
 
 - **Open Uhella**
@@ -154,4 +156,3 @@ If your Mac often sleeps or you travel a lot, a **Mac mini** is usually the easi
 ## Simple way to think about it
 
 **Uhella Backend is the always-working part of Uhella. It stays on your Mac, runs the AI, keeps your library ready, and lets Telegram talk to your photos.**
-
