@@ -2,6 +2,8 @@
 
 The **backend server** is the small Mac app that keeps Uhella running in the background.
 
+It is **free**.
+
 It does the heavy work for you:
 
 - reads your local Photos library
@@ -28,6 +30,8 @@ Your photos stay on **your Mac**.
 
 The first launch is simple and easy.
 
+For the **first install**, download the **.dmg** and install Uhella Backend like a normal Mac app.
+
 Uhella Backend shows a **step-by-step setup window** and guides you through everything with a normal Mac UI — no terminal, no manual server setup.
 
 It will guide you through downloading and preparing what it needs:
@@ -37,6 +41,8 @@ It will guide you through downloading and preparing what it needs:
 3. **AI model**
 
 The first setup can take a while because it may need to download several GB of files. After that, daily use is much easier.
+
+After the first install, Uhella Backend checks for updates automatically every **6 hours** and, by default, downloads and installs upgrades for you.
 
 If macOS asks for **Photos access**, allow it.
 
