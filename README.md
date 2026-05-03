@@ -1,66 +1,157 @@
-# Uhella: Quick Start Guide & User Manual 📸✨
+# Uhella Backend Server User Guide
 
-https://youtu.be/e03lexMLSq0
+The **backend server** is the small Mac app that keeps Uhella running in the background.
 
-Welcome to **Uhella** — an AI-powered personal photo discovery app available on iOS and macOS. Think of it as a personalized, TikTok-style endless feed for your own photo collection. Its primary goal isn't to be a rigid photo organizer, but rather to help you rediscover your memories through a uniquely tailored "AI Taste" that adapts to what captures your attention.
+It does the heavy work for you:
 
----
+- reads your local Photos library
+- runs the AI on your Mac
+- powers the Telegram bot
+- keeps indexing in the background
+- helps with archive and free-iCloud-space tasks
 
-## 🌟 Why Uhella? (Use Cases)
-
-**1. Rediscover Lost Memories**
-You likely have thousands of photos sitting on your phone that you haven't viewed in ages. With Uhella, the app will automatically surface these forgotten moments. Rather than sorting rigidly by date, place, or event—or displaying them completely randomly—Uhella learns what you like and dislike. It feeds you photos dynamically, actively trying to surface the best of your entire collection.
-
-**2. Share Your "Taste", Not Your Photos**
-In the non-AI era, we shared specific videos, photos, or text. Now, we can share our *Taste* (technically your unique "self-score" model). Because Uhella determines what photos are "good" based on your local interactions, you can share this profile with friends. When they load your Taste into their app, Uhella will rate their local photos based on *your* preferences. This allows you to compare aesthetics and "rate" each other's hidden collections honestly and privately, without ever seeing or sharing the raw photos themselves.
+Your photos stay on **your Mac**.
 
 ---
 
-## 🚀 Getting Started
+## What you need
 
-When you launch the app, you dive straight into discovering your memories. The interface is purposefully minimal to let the photos shine.
-
-### Installation / Download Links
-* **iOS (iPhone/iPad):** [Download Uhella on the App Store](https://apps.apple.com/us/app/uhella/id6737429973)
-* **macOS:** [Download Uhella on the Mac App Store](https://apps.apple.com/my/app/uhella/id6737429973?platform=mac)
-
-### Quick Create
-For users who want to jump straight to making something beautiful, we offer the **Quick Create** workflow. 
-* **Streamlined Creation:** Jump straight to generating videos or collages without navigating complex editing menus.
-* **Auto-Curated:** The app groups chosen photos together behind the scenes, so you can focus entirely on the final product rather than manual sorting.
-* **Create Taste:** You can also use Quick Create to intentionally train the AI on specific aesthetics or memories you want to see more of in your feed.
+- macOS 13 or newer
+- the **Uhella Backend** app
+- permission to access your Photos library
+- internet for first-time setup and Telegram
+- a Mac that can stay on, or a **Mac mini** if you travel a lot or want Uhella available anytime
 
 ---
 
-## 🤖 The Unique "Taste" of Your AI
+## First-time setup
 
-Uhella's most powerful feature is its **Taste**. Unlike standard timeline-based galleries, Uhella learns your preferences. The more you use the app, the better it becomes at surfacing photos you didn't even know you were looking for—all processed entirely locally on your device! 
+The first launch is simple and easy.
 
-Our Transformer-based AI relies solely on what you **tap** to shape your future feed. We call this the *"clicks-is-all-you-need"* approach. By simply interacting with the photos you love, you are curating a highly personalized, unique aesthetic feed.
+Uhella Backend shows a **step-by-step setup window** and guides you through everything with a normal Mac UI — no terminal, no manual server setup.
 
----
+It will guide you through downloading and preparing what it needs:
 
-## 📱 Navigation & The AI Feed
+1. **Ollama**
+2. **AI engine**
+3. **AI model**
 
-Navigating between photos and pages is entirely gesture-based, matching intuitive, modern feed interfaces:
+The first setup can take a while because it may need to download several GB of files. After that, daily use is much easier.
 
-* **Home Page (AI Feed):** Your personalized, endless vertical feed of recommended photos, shaped by your AI's taste.
-* **Thumbnails Page:** A sweeping grid overview of the photos found on your device.
-* **Photo Detail Page:** For interacting with and exploring a specific photo in full-screen.
-
-### Gesture Controls
-* ↕️ **Swipe Up / Swipe Down:** Scroll chronologically through your feed or the AI-recommended queue.
-* ⬅️ **Swipe Left / Swipe Right:** Seamlessly transition between the full-screen **Home Page (AI Feed)** and the broad **Thumbnails Page**.
-* 👆 **Tap / Click:** Engaging with a photo is the ultimate signal. Tapping tells the AI exactly what content you prefer to see next!
+If macOS asks for **Photos access**, allow it.
 
 ---
 
-## 🎨 Creative Editing Features
+## Setting up Telegram
 
-From the main menu (and accessible via Quick Create), you can take action on your rediscovered memories:
+If you want to use Uhella from your phone, set up Telegram inside the backend app.
 
-1. **Create Taste:** Select multiple photos from your library and provide direct feedback (**Love, Like, or Neutral**) for each. The AI scans your entire library and uses these signals to fine-tune your unique AI Taste. You can even use the **Crop Search** feature to focus the AI on specific subjects within your training photos!
-2. **Generate Video:** Select a batch of images and the app will process and stitch them into a beautiful, shareable photo slideshow video.
-3. **Generate Collage:** Effortlessly group memories together into aesthetic grid-based collages.
+Uhella guides you through it step by step:
 
-Enjoy exploring your past through a completely new lens!
+1. Create a Telegram bot with **@BotFather**
+2. Paste the bot token into Uhella
+3. Find your Telegram ID with **@userinfobot**
+4. Confirm that Telegram messages are reaching you
+
+There is also an optional step for **large video downloads**.
+
+---
+
+## What the backend server does every day
+
+Once it is running, Uhella Backend works by itself:
+
+- keeps the AI server running
+- keeps your photo index up to date
+- powers photo search and chat replies
+- sends Telegram messages through your bot
+- watches for archive-ready photos and videos
+
+When Uhella has photos or videos ready to move, it can send a Telegram notification with a **Move** button.
+
+---
+
+## What you will see in the menu bar
+
+Uhella Backend lives in the **macOS menu bar**. That is your control center.
+
+Common options include:
+
+- **Open Uhella**
+- **Start at Login**
+- **Keep Awake**
+- **Photo Library** — switch libraries, reset index, clean photo cache
+- **Telegram Bot**
+- **Configure Telegram**
+- **Check for Updates**
+- **Quit Uhella Backend**
+
+---
+
+## Useful everyday settings
+
+### Start at Login
+
+Turn this on if you want Uhella to start automatically when your Mac signs in.
+
+### Keep Awake
+
+Turn this on if your Mac tends to sleep and you want Uhella to stay available.
+
+### Photo Library
+
+If you have more than one Photos library, you can switch between them from the menu bar.
+
+You can also:
+
+- **Reset Index** if you want Uhella to rebuild its search data from scratch
+- **Clean Photo Cache** if you want to free local preview-file space without touching the originals
+
+---
+
+## Status and warnings
+
+The backend server checks itself while it runs.
+
+It can show warnings for things like:
+
+- Photos access missing
+- low disk space
+- iCloud Photos configuration problems
+- setup not finished yet
+
+If you see a warning, open the menu bar app first. In many cases, the fix is shown right there.
+
+---
+
+## Privacy
+
+Uhella Backend is designed to run **locally on your Mac**.
+
+- your Photos library stays on your machine
+- the backend server reads your library locally
+- Telegram is used as the chat channel
+
+Uhella is meant to give you a private way to talk to your own photo library.
+
+---
+
+## If something is not working
+
+Try these first:
+
+1. Make sure the backend app is open in the menu bar
+2. Make sure your Mac is awake and connected to the internet
+3. Make sure Photos access was allowed
+4. Open **Configure Telegram** again if the bot is not replying
+5. Use **Reset Index** if photo search looks incomplete or outdated
+6. Use **Check for Updates** to install the latest backend version
+
+If your Mac often sleeps or you travel a lot, a **Mac mini** is usually the easiest long-term setup.
+
+---
+
+## Simple way to think about it
+
+**Uhella Backend is the always-working part of Uhella. It stays on your Mac, runs the AI, keeps your library ready, and lets Telegram talk to your photos.**
+
