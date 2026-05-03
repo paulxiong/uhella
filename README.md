@@ -1,164 +1,79 @@
-# Uhella Backend Server User Guide
+# Uhella Backend User Guide
 
-The **backend server** is the small Mac app that keeps Uhella running in the background.
+Uhella Backend is the small Mac app that runs the Uhella server on your Mac.
 
 It is **free**.
 
-It does the heavy work for you:
-
-- reads your local Photos library
-- runs the AI on your Mac
-- powers the Telegram bot
-- keeps indexing in the background
-- helps with archive and free-iCloud-space tasks
-
-Your photos stay on **your Mac**.
-
 ---
 
-## What you need
-
-- macOS 13 or newer
-- the **Uhella Backend** app
-- permission to access your Photos library
-- internet for first-time setup and Telegram
-- a Mac that can stay on, or a **Mac mini** if you travel a lot or want Uhella available anytime
-
----
-
-## First-time setup
-
-The first launch is simple and easy.
+## Installation
 
 For the **first install**, download the **.dmg** and install Uhella Backend like a normal Mac app.
 
-Uhella Backend shows a **step-by-step setup window** and guides you through everything with a normal Mac UI — no terminal, no manual server setup.
+After you open it, Uhella shows a **simple step-by-step setup window**. It guides you through everything with a normal Mac UI.
 
-It will guide you through downloading and preparing what it needs:
+No terminal. No manual server setup.
+
+It helps you install:
 
 1. **Ollama**
 2. **AI engine**
 3. **AI model**
 
-The first setup can take a while because it may need to download several GB of files. After that, daily use is much easier.
-
-After the first install, Uhella Backend checks for updates automatically every **6 hours** and, by default, downloads and installs upgrades for you.
-
 If macOS asks for **Photos access**, allow it.
+
+The first setup can take some time because it may need to download several GB of files.
 
 ---
 
-## Setting up Telegram
+## Automatic updates
 
-If you want to use Uhella from your phone, set up Telegram inside the backend app.
+After the first install, Uhella Backend checks for updates automatically every **6 hours**.
 
-Uhella guides you through it step by step:
+By default, it downloads and installs upgrades for you automatically.
 
-1. Create a Telegram bot with **@BotFather**
+---
+
+## Telegram setup
+
+If you want to use Uhella from your phone, set up Telegram inside the app.
+
+Uhella guides you step by step:
+
+1. Create a bot with **@BotFather**
 2. Paste the bot token into Uhella
 3. Find your Telegram ID with **@userinfobot**
-4. Confirm that Telegram messages are reaching you
+4. Confirm that Telegram messages reach you
 
 There is also an optional step for **large video downloads**.
 
 ---
 
-## What the backend server does every day
+## Daily use
 
-Once it is running, Uhella Backend works by itself:
-
-- keeps the AI server running
-- keeps your photo index up to date
-- powers photo search and chat replies
-- sends Telegram messages through your bot
-- watches for archive-ready photos and videos
-
-When Uhella has photos or videos ready to move, it can send a Telegram notification with a **Move** button.
-
----
-
-## What you will see in the menu bar
-
-Uhella Backend lives in the **macOS menu bar**. That is your control center.
+Uhella Backend lives in the **macOS menu bar**.
 
 ![Uhella Backend menu](menu.png)
 
-Common options include:
+From there you can use:
 
 - **Open Uhella**
 - **Start at Login**
 - **Keep Awake**
-- **Photo Library** — switch libraries, reset index, clean photo cache
+- **Photo Library**
 - **Telegram Bot**
 - **Configure Telegram**
 - **Check for Updates**
 - **Quit Uhella Backend**
 
----
+If you have more than one Photos library, you can switch libraries there too.
 
-## Useful everyday settings
-
-### Start at Login
-
-Turn this on if you want Uhella to start automatically when your Mac signs in.
-
-### Keep Awake
-
-Turn this on if your Mac tends to sleep and you want Uhella to stay available.
-
-### Photo Library
-
-If you have more than one Photos library, you can switch between them from the menu bar.
-
-You can also:
-
-- **Reset Index** if you want Uhella to rebuild its search data from scratch
-- **Clean Photo Cache** if you want to free local preview-file space without touching the originals
+When Uhella has photos or videos ready to move, it can send a Telegram notification with a **Move** button.
 
 ---
 
-## Status and warnings
+## Best setup
 
-The backend server checks itself while it runs.
+A Mac that can stay on works well.
 
-It can show warnings for things like:
-
-- Photos access missing
-- low disk space
-- iCloud Photos configuration problems
-- setup not finished yet
-
-If you see a warning, open the menu bar app first. In many cases, the fix is shown right there.
-
----
-
-## Privacy
-
-Uhella Backend is designed to run **locally on your Mac**.
-
-- your Photos library stays on your machine
-- the backend server reads your library locally
-- Telegram is used as the chat channel
-
-Uhella is meant to give you a private way to talk to your own photo library.
-
----
-
-## If something is not working
-
-Try these first:
-
-1. Make sure the backend app is open in the menu bar
-2. Make sure your Mac is awake and connected to the internet
-3. Make sure Photos access was allowed
-4. Open **Configure Telegram** again if the bot is not replying
-5. Use **Reset Index** if photo search looks incomplete or outdated
-6. Use **Check for Updates** to install the latest backend version
-
-If your Mac often sleeps or you travel a lot, a **Mac mini** is usually the easiest long-term setup.
-
----
-
-## Simple way to think about it
-
-**Uhella Backend is the always-working part of Uhella. It stays on your Mac, runs the AI, keeps your library ready, and lets Telegram talk to your photos.**
+A **Mac mini** is an even better choice if you travel a lot or want Uhella available anytime.
