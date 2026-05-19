@@ -1,3 +1,7 @@
+
+<img width="1024" height="1536" alt="1page_backend_1" src="https://github.com/user-attachments/assets/b34cd72d-176b-44dd-bb46-093375b3bd2e" />
+
+
 # Uhella Backend User Guide
 
 Uhella Backend is the small Mac app that runs the Uhella server on your Mac.
