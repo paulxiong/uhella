@@ -18,12 +18,6 @@ After you open it, Uhella shows a **simple step-by-step setup window**. It guide
 
 No terminal. No manual server setup.
 
-It helps you install:
-
-1. **Ollama**
-2. **AI engine**
-3. **AI model**
-
 If macOS asks for **Photos access**, allow it.
 
 The first setup can take some time because it may need to download several GB of files.
