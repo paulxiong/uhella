@@ -3,7 +3,7 @@
 
 <img width="1024" height="1536" alt="1pq_backend_zh_1" src="https://github.com/user-attachments/assets/79d40b15-6e03-4d68-878f-3e60e21f7df6" />
 
-# screen shot
+# Screen shot
 https://youtube.com/shorts/gIdLqxp_I7s?feature=share
 
 # Uhella Backend User Guide
