@@ -3,8 +3,12 @@
 
 <img width="1024" height="1536" alt="1pq_backend_zh_1" src="https://github.com/user-attachments/assets/79d40b15-6e03-4d68-878f-3e60e21f7df6" />
 
-# Screen shot
-https://youtube.com/shorts/gIdLqxp_I7s?feature=share
+# Screen shot 
+    Agent talk to Gemma 4.0, function Gemma and VLM, self-improvement by:
+    self generate question: "how many photos from Madagascar?: ...
+    self check the answer,  if failed, auto fix the server code.
+[https://youtube.com/shorts/gIdLqxp_I7s?feature=share
+](https://www.youtube.com/watch?v=K22UKcL3UnM)
 
 # Uhella Backend User Guide
 
