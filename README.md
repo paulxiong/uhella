@@ -2,6 +2,7 @@
 <img width="1024" height="1536" alt="1page_backend_1" src="https://github.com/user-attachments/assets/b34cd72d-176b-44dd-bb46-093375b3bd2e" />
 <img width="1536" height="1024" alt="QA_HAENESS" src="https://github.com/user-attachments/assets/459e89c2-9d6e-47fb-a67c-f5be197b1abc" />
 <img width="1024" height="1536" alt="1pq_backend_zh_1" src="https://github.com/user-attachments/assets/79d40b15-6e03-4d68-878f-3e60e21f7df6" />
+<img width="1536" height="1024" alt="QA_HAENESS chinese" src="https://github.com/user-attachments/assets/1b9ea571-d691-4021-b983-2ea8a454d5a5" />
 
 
 # Screen shot 
