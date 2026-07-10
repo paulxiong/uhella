@@ -1,91 +1,124 @@
+<div align="center">
 
-<img width="1024" height="1536" alt="1page_backend_1" src="https://github.com/user-attachments/assets/b34cd72d-176b-44dd-bb46-093375b3bd2e" />
+<img src="https://github.com/user-attachments/assets/b34cd72d-176b-44dd-bb46-093375b3bd2e" alt="Uhella — free up your iCloud space" width="420" />
 
-<img width="1536" height="1024" alt="QA_HAENESS" src="https://github.com/user-attachments/assets/459e89c2-9d6e-47fb-a67c-f5be197b1abc" />
+# Uhella
 
-<img width="1024" height="1536" alt="1pq_backend_zh_1" src="https://github.com/user-attachments/assets/79d40b15-6e03-4d68-878f-3e60e21f7df6" />
+### Stop paying for iCloud storage — keep every photo, on your own Mac.
 
-<img width="1536" height="1024" alt="QA_HAENESS chinese" src="https://github.com/user-attachments/assets/1b9ea571-d691-4021-b983-2ea8a454d5a5" />
+[![Download](https://img.shields.io/github/v/release/paulxiong/uhella?label=Download&color=0A84FF)](https://github.com/paulxiong/uhella/releases/latest)
+![macOS 13+](https://img.shields.io/badge/macOS-13%2B-black?logo=apple)
+![Apple Silicon and Intel](https://img.shields.io/badge/Mac-Apple%20Silicon%20%7C%20Intel-555)
+![100% local AI](https://img.shields.io/badge/AI-100%25%20local-34C759)
+![Free](https://img.shields.io/badge/Price-Free-34C759)
 
+**[⬇️ Download for Mac](https://github.com/paulxiong/uhella/releases/latest)** &nbsp;·&nbsp; **[▶️ Watch the demo](https://www.youtube.com/watch?v=K22UKcL3UnM)** &nbsp;·&nbsp; **[中文说明](README_zh.md)**
 
-
-# Screen shot 
-    Agent talk to Gemma 4.0, function Gemma and VLM, self-improvement by:
-    self generate question: "how many photos from Madagascar?: ...
-    self check the answer,  if failed, auto fix the server code.
-[https://youtube.com/shorts/gIdLqxp_I7s?feature=share
-](https://www.youtube.com/watch?v=K22UKcL3UnM)
-
-# Uhella Backend User Guide
-
-Uhella Backend is the small Mac app that runs the Uhella server on your Mac.
-
-It is **free**.
+</div>
 
 ---
 
-## Installation
+## What is Uhella?
 
-For the **first install**, download the **.dmg** and install Uhella Backend like a normal Mac app.
+Uhella is a free Mac menu-bar app that solves the "iCloud storage full" problem — without deleting a single memory.
 
-After you open it, Uhella shows a **simple step-by-step setup window**. It guides you through everything with a normal Mac UI.
+It safely moves your **older photo originals out of iCloud and onto your own Mac or external drive**, and only removes anything from iCloud after a verified copy exists on your disk. On top of that, it gives you **private AI photo search** — ask for *"lions"*, *"Nairobi 2025"*, or *"sunset at the beach"* from your phone via Telegram, and the AI that answers runs entirely on your Mac.
 
-No terminal. No manual server setup.
+## Why Uhella?
 
-If macOS asks for **Photos access**, allow it.
+|  | Cloud photo services | **Uhella** |
+|---|---|---|
+| Your photos uploaded to someone's servers | Yes | **Never — they stay on your Mac** |
+| AI search works without internet | No | **Yes — 100% local AI** |
+| Monthly fee | $3–$12 / month, forever | **Free** |
+| Who owns the storage | Them | **You** |
 
-The first setup can take some time because it may need to download several GB of files.
+iCloud 2 TB costs about **$120 every year**. A hard drive you probably already own holds the same photos — forever, for free. Uhella is not a replacement for iCloud or Google Photos; it's a companion that sits on top of what you already use and keeps the bill small.
+
+## How it works
+
+1. **Local AI learns your library.** A vision model on your Mac looks at every photo and writes a description; nothing is uploaded anywhere.
+2. **Originals are archived to your drive.** Full-quality originals are continuously exported into monthly folders (`~/uhella_archives/2026-07/ …`) on the disk you choose, and each file is **verified** against the archive.
+3. **You free iCloud space — your way.**
+   - Tap the **Move** button when Uhella tells you photos are safely archived, or
+   - Set **Auto Archive** ("keep at most N photos in iCloud") and let it run itself, or
+   - Drag photos into the **Move Now** album to archive them immediately.
+
+> **Safety first 🛡️**
+> Nothing is ever removed from iCloud until a verified copy exists on your drive. Photos in your **Keep Forever** album are never touched. And every archived photo can be **restored** back into Photos later — with its original date.
+
+## Features
+
+- 🔍 **Search by memory, not keywords** — "kids at the beach last summer" just works, powered by local Gemma + vision models
+- 📱 **Use it from anywhere** — a private Telegram bot lets you search, browse, and free space from your phone
+- 🗄️ **Auto Archive** — keep iCloud at a fixed size, oldest photos move off automatically
+- ⚡ **Move Now / Keep Forever albums** — full manual control with two drag-and-drop albums
+- 📚 **Multiple Photos libraries** — switch between libraries from the menu bar
+- 💾 **Any drive, movable anytime** — archive to an external disk and migrate later with *Copy Storage to New Drive*
+- ♻️ **Restore anytime** — bring archived photos back into Photos with original dates
+- 🔄 **Auto-updates** — checks every 6 hours, updates itself
+
+## Install (about 10 minutes — most of it is waiting)
+
+**You need:** a Mac running **macOS 13+** (Apple Silicon or Intel), ~8 GB free disk for the AI models, and ideally a Mac that stays on — a **Mac mini** is perfect.
+
+1. **[Download the DMG](https://github.com/paulxiong/uhella/releases/latest)** — pick `…_arm64.dmg` for Apple Silicon (M-series) or `…_x86_64.dmg` for Intel Macs.
+2. Open it and **drag Uhella Backend to Applications**, then launch it.
+3. A **step-by-step setup window** takes over: it downloads the local AI models (~7 GB, one time, with progress bars). No terminal, no config files.
+4. When macOS asks, allow **Photos access**, **Full Disk Access**, and **Accessibility** — Uhella shows you exactly where to click for each.
+
+That's it. Uhella keeps itself updated automatically from then on.
+
+## Using it
+
+Uhella lives in your **menu bar**:
+
+<img src="menu.png" alt="Uhella menu bar" width="360" />
+
+- **Auto Archive** — set the "keep at most N photos" limit
+- **Photo Library** — switch libraries, reset the index, clean caches
+- **Telegram Bot / Configure Telegram** — set up phone access
+- **Check for Updates**, **Start at Login**, **Keep Awake**
+
+**Phone access via Telegram** (optional, ~4 minutes): create a bot with **@BotFather**, paste the token into *Configure Telegram…*, and start chatting:
+
+> `lions` · `Nairobi 2025` · `how many photos from Madagascar?` · `more` · `similar`
+
+Full walkthrough: **[Telegram setup guide](uhella_telegram_guide.md)** · Demo: **[YouTube](https://www.youtube.com/watch?v=K22UKcL3UnM)**
+
+## FAQ
+
+<details>
+<summary><b>Is it safe? Could I lose photos?</b></summary>
+
+A photo becomes eligible for removal from iCloud only after its original has been exported to your drive **and verified**. Photos in the **Keep Forever** album are never removed. Anything archived can be restored back into Photos, with its original capture date.
+</details>
+
+<details>
+<summary><b>What data leaves my Mac?</b></summary>
+
+Your photos are **never uploaded to any AI or cloud service** — all models run locally. Photos leave your Mac only when *you* send them through your own Telegram bot. (For place names, Uhella sends GPS coordinates — never photos — to OpenStreetMap.)
+</details>
+
+<details>
+<summary><b>Does it cost anything?</b></summary>
+
+No. The app is free, the AI models are free and run on your hardware. There is no account and no subscription.
+</details>
+
+<details>
+<summary><b>Can I move the archive to a bigger drive later?</b></summary>
+
+Yes — *Copy Storage to New Drive…* in the menu bar migrates everything, and you can plug or unplug archive drives anytime.
+</details>
 
 ---
 
-## Automatic updates
+<div align="center">
 
-After the first install, Uhella Backend checks for updates automatically every **6 hours**.
+**Also try the Uhella app** — an AI-powered photo discovery feed for your own library:
+[iOS / iPadOS](https://apps.apple.com/us/app/uhella/id6737429973) · [macOS](https://apps.apple.com/my/app/uhella/id6737429973?platform=mac)
 
-By default, it downloads and installs upgrades for you automatically.
+Questions or problems? **[Open an issue](https://github.com/paulxiong/uhella/issues)**
 
----
-
-## Telegram setup
-
-If you want to use Uhella from your phone, set up Telegram inside the app.
-
-Uhella guides you step by step:
-
-1. Create a bot with **@BotFather**
-2. Paste the bot token into Uhella
-3. Find your Telegram ID with **@userinfobot**
-4. Confirm that Telegram messages reach you
-
-There is also an optional step for **large video downloads**.
-
----
-
-## Daily use
-
-Uhella Backend lives in the **macOS menu bar**.
-
-![Uhella Backend menu](menu.png)
-
-From there you can use:
-
-- **Open Uhella**
-- **Start at Login**
-- **Keep Awake**
-- **Photo Library**
-- **Telegram Bot**
-- **Configure Telegram**
-- **Check for Updates**
-- **Quit Uhella Backend**
-
-If you have more than one Photos library, you can switch libraries there too.
-
-When Uhella has photos or videos ready to move, it can send a Telegram notification with a **Move** button.
-
----
-
-## Best setup
-
-A Mac that can stay on works well.
-
-A **Mac mini** is an even better choice if you travel a lot or want Uhella available anytime.
+</div>
