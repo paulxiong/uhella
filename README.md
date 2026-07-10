@@ -22,7 +22,9 @@
 
 Uhella is a free Mac menu-bar app that solves the "iCloud storage full" problem — without deleting a single memory.
 
-It safely moves your **older photo originals out of iCloud and onto your own Mac or external drive**, and only removes anything from iCloud after a verified copy exists on your disk. On top of that, it gives you **private AI photo search** — ask for *"lions"*, *"Nairobi 2025"*, or *"sunset at the beach"* from your phone via Telegram, and the AI that answers runs entirely on your Mac.
+It safely moves your **older photo originals out of iCloud and onto your own Mac or external drive**, and only removes anything from iCloud after a verified copy exists on your disk. On top of that, it gives you **private AI photo search** — ask for *"lions"*, *"Nairobi 2025"*, or *"sunset at the beach"* from your phone, and the AI that answers runs entirely on your Mac.
+
+On your phone, use the free **[Uhella iPhone app](https://apps.apple.com/us/app/uhella/id6737429973)** — it finds your Mac on your Wi-Fi by itself — or a Telegram bot. Your choice.
 
 ## Why Uhella?
 
@@ -50,7 +52,8 @@ iCloud 2 TB costs about **$120 every year**. A hard drive you probably already o
 ## Features
 
 - 🔍 **Search by memory, not keywords** — "kids at the beach last summer" just works, powered by local Gemma + vision models
-- 📱 **Use it from anywhere** — a private Telegram bot lets you search, browse, and free space from your phone
+- 📱 **iPhone app included** — the free [Uhella app](https://apps.apple.com/us/app/uhella/id6737429973) connects straight to your Mac, zero setup on your home Wi-Fi
+- 💬 **Telegram bot (optional)** — prefer chat? Search, browse, and free space from any Telegram app
 - 🗄️ **Auto Archive** — keep iCloud at a fixed size, oldest photos move off automatically
 - ⚡ **Move Now / Keep Forever albums** — full manual control with two drag-and-drop albums
 - 📚 **Multiple Photos libraries** — switch between libraries from the menu bar
@@ -80,7 +83,13 @@ Uhella lives in your **menu bar**:
 - **Telegram Bot / Configure Telegram** — set up phone access
 - **Check for Updates**, **Start at Login**, **Keep Awake**
 
-**Phone access via Telegram** (optional, ~4 minutes): create a bot with **@BotFather**, paste the token into *Configure Telegram…*, and start chatting:
+### On your phone — two ways
+
+**① The Uhella iPhone app** (easiest) — **[get it on the App Store](https://apps.apple.com/us/app/uhella/id6737429973)**. Open it on the same Wi-Fi as your Mac and it **finds your backend automatically** — nothing to configure. (You can also type your Mac's name or IP once, if you prefer.)
+
+Want it to work away from home too? Install the free **[Tailscale](https://tailscale.com)** app on both your iPhone and your Mac and sign in — that's the whole setup. Your phone then reaches your Mac securely from anywhere.
+
+**② Telegram** (great for chat lovers, ~4 minutes): create a bot with **@BotFather**, paste the token into *Configure Telegram…*, and start chatting:
 
 > `lions` · `Nairobi 2025` · `how many photos from Madagascar?` · `more` · `similar`
 
@@ -101,6 +110,12 @@ Your photos are **never uploaded to any AI or cloud service** — all models run
 </details>
 
 <details>
+<summary><b>Do I need Telegram?</b></summary>
+
+No. The **Uhella iPhone app** talks directly to your Mac — on your home Wi-Fi it connects with zero setup. Telegram is just an alternative if you prefer chatting.
+</details>
+
+<details>
 <summary><b>Does it cost anything?</b></summary>
 
 No. The app is free, the AI models are free and run on your hardware. There is no account and no subscription.
@@ -116,7 +131,7 @@ Yes — *Copy Storage to New Drive…* in the menu bar migrates everything, and 
 
 <div align="center">
 
-**Also try the Uhella app** — an AI-powered photo discovery feed for your own library:
+**Get the Uhella app** — search your library and enjoy an AI photo discovery feed, right from your phone:
 [iOS / iPadOS](https://apps.apple.com/us/app/uhella/id6737429973) · [macOS](https://apps.apple.com/my/app/uhella/id6737429973?platform=mac)
 
 Questions or problems? **[Open an issue](https://github.com/paulxiong/uhella/issues)**
