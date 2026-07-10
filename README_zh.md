@@ -1,64 +1,124 @@
-# Uhella: 快速入门指南与用户手册 📸✨
+<div align="center">
 
-欢迎使用 **Uhella** — 这是一款支持 iOS 和 macOS 的 AI 驱动个人照片发现与重温应用。你可以把它想象成专属于你相册的、类似于TikTok风格的无尽信息流。它的主要目标不是严格的照片整理，而是通过一个独特且只属于你的“AI 品味 (AI Taste)” 帮助你重新发现那些快被遗忘的记忆。
+<img src="https://github.com/user-attachments/assets/79d40b15-6e03-4d68-878f-3e60e21f7df6" alt="Uhella — 释放你的 iCloud 空间" width="420" />
 
----
+# Uhella
 
-## 🌟 为什么使用 Uhella? (核心使用场景)
+### 不再为 iCloud 储存付费 — 每一张照片，都留在你自己的 Mac 上。
 
-**1. 重新发现遗失的记忆**
-你的手机里很可能存放着成千上万张许久未看的照片。使用 Uhella，应用会自动让这些被遗忘的瞬间重见天日。它不会刻板地根据日期、地点或事件来排序，也不会完全随机展示。相反，Uhella 会通过学习你的喜好与偏好，在你的整个相册中主动挖掘并动态呈现最精彩的画面。
+[![下载](https://img.shields.io/github/v/release/paulxiong/uhella?label=%E4%B8%8B%E8%BD%BD&color=0A84FF)](https://github.com/paulxiong/uhella/releases/latest)
+![macOS 13+](https://img.shields.io/badge/macOS-13%2B-black?logo=apple)
+![Apple Silicon 和 Intel](https://img.shields.io/badge/Mac-Apple%20Silicon%20%7C%20Intel-555)
+![100%25 本地 AI](https://img.shields.io/badge/AI-100%25%20%E6%9C%AC%E5%9C%B0-34C759)
+![免费](https://img.shields.io/badge/%E4%BB%B7%E6%A0%BC-%E5%85%8D%E8%B4%B9-34C759)
 
-**2. 分享你的“品味”，而不是你的照片**
-在非 AI 时代，我们分享的是具体的视频、照片或文字。而现在，我们可以分享我们的 **“品味 (Taste)”**（技术上即你独特的 “self-score” 模型）。因为 Uhella 完全根据你在本地交互的数据来决定哪些照片是“好的”，你可以将这个品味档案分享给朋友。当朋友在 Uhella 中加载你的“品味”后，应用会根据你的审美偏好对他们本地的照片进行“评分 (Rate)”。这让你们能够诚实且私密地对比彼此的审美，甚至为彼此从未公开过的藏品打分，而互不暴露隐私照片。
+**[⬇️ 下载 Mac 版](https://github.com/paulxiong/uhella/releases/latest)** &nbsp;·&nbsp; **[▶️ 观看演示](https://www.youtube.com/watch?v=K22UKcL3UnM)** &nbsp;·&nbsp; **[English](README.md)**
 
----
-
-## 🚀 快速开始
-
-当你打开应用时，你将直接沉浸在发现记忆的过程中。极简的 UI 界面设计旨在让照片本身成为焦点。
-
-### 下载链接
-* **iOS (iPhone/iPad):** [在 App Store 下载 Uhella](https://apps.apple.com/us/app/uhella/id6737429973)
-* **macOS:** [在 Mac App Store 下载 Uhella](https://apps.apple.com/my/app/uhella/id6737429973?platform=mac)
-
-### 快捷创作 (Quick Create)
-如果你希望立刻制作出精美的作品，我们提供了 **快捷创作** 工作流。
-* **极简创作：** 无需浏览复杂的编辑菜单，直接跳转至生成动态视频或拼图的界面。
-* **智能精选：** 应用会在后台自动把你所选的照片归组，让你只需专注于最终成果，告别繁琐的手动整理。
-* **塑造品味 (Create Taste)：** 你还可以使用快捷创作功能，有意识地训练 AI，告诉它你希望在接下来的信息流中看到哪类特定的审美或记忆。
+</div>
 
 ---
 
-## 🤖 独一无二的 AI “品味”
+## Uhella 是什么？
 
-Uhella 最强大的功能就是它的 **品味 (Taste)**。与标准的时间轴相册不同，Uhella 会学习你的偏好。你使用得越多，它就越擅长为你浮现那些你甚至都不知道自己想看的照片——并且所有 AI 处理都在你的设备**本地**完成，极度注重隐私！
+Uhella 是一款免费的 Mac 菜单栏应用，专治「iCloud 储存空间已满」——而且不用删掉任何一张回忆。
 
-我们基于 Transformer 的 AI 完全依赖你的**点击 (Tap)** 来塑造你未来的信息流。我们将此称为 *"点击即一切 (clicks-is-all-you-need)"* 架构。仅仅通过与你喜欢的照片互动，你就在打造一个高度个性化、独一无二的审美信息流。
+它会把**较早的照片原件安全地从 iCloud 移到你自己的 Mac 或外接硬盘上**，并且只有在你的磁盘上已经存在一份**校验过的副本**之后，才会从 iCloud 移除。除此之外，它还提供**私密的 AI 照片搜索**：在手机上通过 Telegram 问一句「狮子」「2025 年内罗毕」「海边的日落」，回答你的 AI 完全运行在你自己的 Mac 上。
+
+## 为什么选 Uhella？
+
+|  | 云端照片服务 | **Uhella** |
+|---|---|---|
+| 照片会上传到别人的服务器 | 会 | **绝不 — 一直在你的 Mac 上** |
+| 没有网络也能 AI 搜索 | 不能 | **能 — 100% 本地 AI** |
+| 月费 | 每月 $3–$12，年年交 | **免费** |
+| 储存设备归谁 | 他们 | **你自己** |
+
+iCloud 2 TB 每年约 **$120**。而你手边多半已经有一块硬盘，能永久免费装下同样的照片。Uhella 不是要取代 iCloud 或 Google Photos，而是叠加在你现有方案之上的伙伴，帮你把账单降下来。
+
+## 工作原理
+
+1. **本地 AI 认识你的照片库。** 视觉模型在你的 Mac 上逐张「看」照片并写下描述，任何内容都不会上传。
+2. **原件归档到你的硬盘。** 全画质原件持续导出到你指定磁盘上的按月文件夹（`~/uhella_archives/2026-07/ …`），每个文件都会**校验**。
+3. **用你喜欢的方式释放 iCloud 空间：**
+   - Uhella 通知你「照片已安全归档」时，点一下 **Move** 按钮；或
+   - 设置 **Auto Archive**（「iCloud 里最多保留 N 张」），让它全自动运行；或
+   - 把照片拖进 **Move Now** 相簿，立即归档。
+
+> **安全第一 🛡️**
+> 在你的硬盘上存在校验过的副本之前，任何照片都不会从 iCloud 移除。**Keep Forever** 相簿里的照片永远不会被动。所有已归档的照片都可以**恢复**回「照片」App，并保留原始拍摄日期。
+
+## 功能一览
+
+- 🔍 **按记忆搜索，而不是按关键词** —「去年夏天孩子们在海边」直接就能搜到，本地 Gemma + 视觉模型驱动
+- 📱 **随时随地使用** — 私人 Telegram 机器人，在手机上搜索、浏览、释放空间
+- 🗄️ **Auto Archive** — 把 iCloud 固定在某个规模，最早的照片自动移出
+- ⚡ **Move Now / Keep Forever 相簿** — 两个拖拽相簿，完全手动掌控
+- 📚 **多照片图库** — 菜单栏里随时切换
+- 💾 **任意硬盘，随时搬家** — 归档到外接磁盘，之后用「Copy Storage to New Drive」整体迁移
+- ♻️ **随时恢复** — 归档照片可恢复回「照片」App，日期不变
+- 🔄 **自动更新** — 每 6 小时检查一次，自动升级
+
+## 安装（约 10 分钟，大部分时间在等下载）
+
+**你需要：** 一台 **macOS 13+** 的 Mac（Apple Silicon 或 Intel），约 8 GB 空闲磁盘放 AI 模型，最好是一台常开的 Mac —— **Mac mini** 最合适。
+
+1. **[下载 DMG](https://github.com/paulxiong/uhella/releases/latest)** — Apple Silicon（M 系列）选 `…_arm64.dmg`，Intel Mac 选 `…_x86_64.dmg`。
+2. 打开后把 **Uhella Backend 拖进「应用程序」**，然后启动。
+3. **分步设置向导**会接管一切：自动下载本地 AI 模型（约 7 GB，仅一次，带进度条）。不用终端，不用配置文件。
+4. macOS 询问时，允许**照片访问**、**完全磁盘访问**和**辅助功能**权限 — Uhella 会告诉你每一步点哪里。
+
+装好之后，它会自己保持最新。
+
+## 日常使用
+
+Uhella 常驻**菜单栏**：
+
+<img src="menu.png" alt="Uhella 菜单栏" width="360" />
+
+- **Auto Archive** — 设置「最多保留 N 张」上限
+- **Photo Library** — 切换图库、重建索引、清理缓存
+- **Telegram Bot / Configure Telegram** — 配置手机访问
+- **Check for Updates**、**Start at Login**、**Keep Awake**
+
+**手机端（Telegram，可选，约 4 分钟）：** 用 **@BotFather** 创建机器人，把 token 粘贴进 *Configure Telegram…*，就可以开聊：
+
+> `狮子` · `Nairobi 2025` · `马达加斯加一共有多少张照片？` · `more` · `similar`
+
+完整教程：**[Telegram 设置指南](uhella_telegram_guide.md)** · 演示视频：**[YouTube](https://www.youtube.com/watch?v=K22UKcL3UnM)**
+
+## 常见问题
+
+<details>
+<summary><b>安全吗？会不会丢照片？</b></summary>
+
+只有当照片原件已导出到你的硬盘**并通过校验**之后，它才有资格从 iCloud 移除。**Keep Forever** 相簿里的照片永远不会被移除。所有归档的照片都能恢复回「照片」App，拍摄日期保持不变。
+</details>
+
+<details>
+<summary><b>哪些数据会离开我的 Mac？</b></summary>
+
+你的照片**绝不会上传到任何 AI 或云服务** — 所有模型都在本地运行。只有当*你自己*通过你配置的 Telegram 机器人发送照片时，照片才会离开你的 Mac。（解析地名时，Uhella 只会向 OpenStreetMap 发送 GPS 坐标，绝不发送照片。）
+</details>
+
+<details>
+<summary><b>要花钱吗？</b></summary>
+
+不用。应用免费，AI 模型免费且跑在你自己的硬件上。没有账号，没有订阅。
+</details>
+
+<details>
+<summary><b>以后能把归档搬到更大的硬盘吗？</b></summary>
+
+可以 — 菜单栏里的 *Copy Storage to New Drive…* 会整体迁移，归档硬盘随时可以插拔。
+</details>
 
 ---
 
-## 📱 交互导航与 AI 信息流
+<div align="center">
 
-在照片和页面之间的导航完全基于手势操作，符合现代的信息流界面直觉：
+**也试试 Uhella App** — 为你自己的照片库打造的 AI 照片发现流：
+[iOS / iPadOS](https://apps.apple.com/us/app/uhella/id6737429973) · [macOS](https://apps.apple.com/my/app/uhella/id6737429973?platform=mac)
 
-* **主页 (AI 信息流):** 这是一条无尽的、垂直的照片推荐流，完全由你的 AI 专属品味所决定。
-* **缩略图页:** 快速纵览设备上所有照片网格墙。
-* **照片详情页:** 全屏浏览，以及对单张照片进行交互的页面。
+有问题？**[提一个 Issue](https://github.com/paulxiong/uhella/issues)**
 
-### 手势控制
-* ↕️ **上滑 / 下滑:** 在按时间排序的信息流或 AI 推荐队列中穿梭。
-* ⬅️ **左滑 / 右滑:** 在全屏的 **主页 (AI 信息流)** 和全局的 **缩略图页** 之间无缝切换。
-* 👆 **点击 (Tap):** 与一张照片的交互是最终的信号。你的每一次点击都在直接告诉 AI 你接下来最想看到什么内容！
-
----
-
-## 🎨 创意编辑功能
-
-从弹窗菜单（也可通过 Quick Create 访问），你可以对重新发现的记忆进行后续操作：
-
-1. **塑造品味 (Create Taste):** 从你的相册中选择多张照片，并为每一张提供直接反馈（**热爱、喜欢或中立**）。AI 会扫描你的整个图库，并利用这些信号来微调你的专属 AI 品味。你甚至可以使用 **裁剪搜索 (Crop Search)** 功能框选训练照片中的特定主体，以使 AI 训练更加聚焦！
-2. **生成视频:** 批量选择一组图片，系统会自动处理并将它们拼接成一部精美、易于分享的照片轮播幻灯片视频。
-3. **生成拼图:** 轻松将你的回忆组合成极具美感的网格拼图。
-
-享受透过全新且专属的镜头去探索过去的乐趣吧！
+</div>
