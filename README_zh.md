@@ -22,7 +22,9 @@
 
 Uhella 是一款免费的 Mac 菜单栏应用，专治「iCloud 储存空间已满」——而且不用删掉任何一张回忆。
 
-它会把**较早的照片原件安全地从 iCloud 移到你自己的 Mac 或外接硬盘上**，并且只有在你的磁盘上已经存在一份**校验过的副本**之后，才会从 iCloud 移除。除此之外，它还提供**私密的 AI 照片搜索**：在手机上通过 Telegram 问一句「狮子」「2025 年内罗毕」「海边的日落」，回答你的 AI 完全运行在你自己的 Mac 上。
+它会把**较早的照片原件安全地从 iCloud 移到你自己的 Mac 或外接硬盘上**，并且只有在你的磁盘上已经存在一份**校验过的副本**之后，才会从 iCloud 移除。除此之外，它还提供**私密的 AI 照片搜索**：在手机上问一句「狮子」「2025 年内罗毕」「海边的日落」，回答你的 AI 完全运行在你自己的 Mac 上。
+
+手机端可以用免费的 **[Uhella iPhone App](https://apps.apple.com/us/app/uhella/id6737429973)**（它会在 Wi-Fi 里自动找到你的 Mac），也可以用 Telegram 机器人，随你喜欢。
 
 ## 为什么选 Uhella？
 
@@ -50,7 +52,8 @@ iCloud 2 TB 每年约 **$120**。而你手边多半已经有一块硬盘，能�
 ## 功能一览
 
 - 🔍 **按记忆搜索，而不是按关键词** —「去年夏天孩子们在海边」直接就能搜到，本地 Gemma + 视觉模型驱动
-- 📱 **随时随地使用** — 私人 Telegram 机器人，在手机上搜索、浏览、释放空间
+- 📱 **自带 iPhone App** — 免费的 [Uhella App](https://apps.apple.com/us/app/uhella/id6737429973) 直连你的 Mac，家里 Wi-Fi 下零配置
+- 💬 **Telegram 机器人（可选）** — 喜欢聊天式操作？在任何 Telegram 客户端里搜索、浏览、释放空间
 - 🗄️ **Auto Archive** — 把 iCloud 固定在某个规模，最早的照片自动移出
 - ⚡ **Move Now / Keep Forever 相簿** — 两个拖拽相簿，完全手动掌控
 - 📚 **多照片图库** — 菜单栏里随时切换
@@ -80,7 +83,13 @@ Uhella 常驻**菜单栏**：
 - **Telegram Bot / Configure Telegram** — 配置手机访问
 - **Check for Updates**、**Start at Login**、**Keep Awake**
 
-**手机端（Telegram，可选，约 4 分钟）：** 用 **@BotFather** 创建机器人，把 token 粘贴进 *Configure Telegram…*，就可以开聊：
+### 手机端 — 两种方式
+
+**① Uhella iPhone App**（最简单）— **[App Store 下载](https://apps.apple.com/us/app/uhella/id6737429973)**。和 Mac 连同一个 Wi-Fi，打开 App 它就会**自动找到你的后端** — 什么都不用配。（也可以手动输入一次 Mac 的名称或 IP。）
+
+想在外面也能用？在 iPhone 和 Mac 上都装上免费的 **[Tailscale](https://tailscale.com)** 并登录 — 设置就这么多。之后你的手机在任何地方都能安全地连回家里的 Mac。
+
+**② Telegram**（喜欢聊天式操作的话，约 4 分钟）：用 **@BotFather** 创建机器人，把 token 粘贴进 *Configure Telegram…*，就可以开聊：
 
 > `狮子` · `Nairobi 2025` · `马达加斯加一共有多少张照片？` · `more` · `similar`
 
@@ -101,6 +110,12 @@ Uhella 常驻**菜单栏**：
 </details>
 
 <details>
+<summary><b>必须用 Telegram 吗？</b></summary>
+
+不用。**Uhella iPhone App** 直接和你的 Mac 通信 — 家里 Wi-Fi 下零配置连接。Telegram 只是给喜欢聊天式操作的人的另一种选择。
+</details>
+
+<details>
 <summary><b>要花钱吗？</b></summary>
 
 不用。应用免费，AI 模型免费且跑在你自己的硬件上。没有账号，没有订阅。
@@ -116,7 +131,7 @@ Uhella 常驻**菜单栏**：
 
 <div align="center">
 
-**也试试 Uhella App** — 为你自己的照片库打造的 AI 照片发现流：
+**下载 Uhella App** — 在手机上搜索你的照片库，享受 AI 照片发现流：
 [iOS / iPadOS](https://apps.apple.com/us/app/uhella/id6737429973) · [macOS](https://apps.apple.com/my/app/uhella/id6737429973?platform=mac)
 
 有问题？**[提一个 Issue](https://github.com/paulxiong/uhella/issues)**
