@@ -93,6 +93,8 @@ Want to reach your photos when you're **away from home** too? That's what remote
 
 **① Tailscale — the full app, from anywhere.** Install the free **[Tailscale](https://tailscale.com)** app on both your iPhone and your Mac and sign in with the same account on each — that's the whole setup. The Uhella app then reaches your Mac securely from anywhere, not just at home.
 
+Full walkthrough: **[Tailscale setup guide](uhella_tailscale_guide.md)**
+
 **② Telegram — chat access, from anywhere** (great for chat lovers, ~4 minutes): create a bot with **@BotFather**, paste the token into *Configure Telegram…* in the menu bar app, and start chatting:
 
 > `lions` · `Nairobi 2025` · `how many photos from Madagascar?` · `more` · `similar`
@@ -100,6 +102,8 @@ Want to reach your photos when you're **away from home** too? That's what remote
 Full walkthrough: **[Telegram setup guide](uhella_telegram_guide.md)** · Demo: **[YouTube](https://www.youtube.com/watch?v=K22UKcL3UnM)**
 
 **③ Static IP / local address — a manual fallback, home Wi-Fi only.** In the menu bar app, open **Remote Access → Local Network (Static IP)…** to see your Mac's name and address, and type it into the iPhone app's server picker if auto-discovery ever doesn't find it on its own.
+
+Full walkthrough: **[Static IP setup guide](uhella_static_ip_guide.md)**
 
 ## FAQ
 

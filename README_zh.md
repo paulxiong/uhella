@@ -93,6 +93,8 @@ Uhella 常驻**菜单栏**：
 
 **① Tailscale — 完整 App，随处可用。** 在 iPhone 和 Mac 上都安装免费的 **[Tailscale](https://tailscale.com)**，用同一个账号登录 — 设置就这么多。之后 Uhella App 会从任何地方安全地连回你的 Mac，不只是在家里。
 
+完整教程：**[Tailscale 设置指南](uhella_tailscale_guide.md)**
+
 **② Telegram — 聊天式访问，随处可用**（喜欢聊天式操作的话，约 4 分钟）：用 **@BotFather** 创建机器人，把 token 粘贴进菜单栏 App 里的 *Configure Telegram…*，就可以开聊：
 
 > `狮子` · `Nairobi 2025` · `马达加斯加一共有多少张照片？` · `more` · `similar`
@@ -100,6 +102,8 @@ Uhella 常驻**菜单栏**：
 完整教程：**[Telegram 设置指南](uhella_telegram_guide.md)** · 演示视频：**[YouTube](https://www.youtube.com/watch?v=K22UKcL3UnM)**
 
 **③ 静态 IP / 本地地址 — 手动兜底方式，仅限家里 Wi-Fi。** 在菜单栏 App 中打开 **Remote Access → Local Network (Static IP)…**，可以看到 Mac 的名称和地址；如果自动发现没找到，就手动输入到 iPhone App 的服务器选择器里。
+
+完整教程：**[静态 IP 设置指南](uhella_static_ip_guide.md)**
 
 ## 常见问题
 
