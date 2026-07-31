@@ -70,7 +70,9 @@ iCloud 2 TB 每年约 **$120**。而你手边多半已经有一块硬盘，能�
 3. **分步设置向导**会接管一切：自动下载本地 AI 模型（约 7 GB，仅一次，带进度条）。不用终端，不用配置文件。
 4. macOS 询问时，允许**照片访问**、**完全磁盘访问**和**辅助功能**权限 — Uhella 会告诉你每一步点哪里。
 
-装好之后，它会自己保持最新。
+装好之后，它会自己保持最新，iPhone App 在家里 Wi-Fi 下也已经可以直接使用，不用额外设置。
+
+> **远程访问（见下文）完全可选。** 不需要的话可以跳过 —— 不设置远程访问，Uhella 在家里一样能完整使用，**无论你是否设置远程访问，Auto Archive 以及 Mac 上的其它一切都会照常运行。** 只有当你想在出门在外时也用 iPhone App 访问照片，才需要设置它。
 
 ## 日常使用
 
@@ -83,17 +85,21 @@ Uhella 常驻**菜单栏**：
 - **Telegram Bot / Configure Telegram** — 配置手机访问
 - **Check for Updates**、**Start at Login**、**Keep Awake**
 
-### 手机端 — 两种方式
+### 手机端
 
-**① Uhella iPhone App**（最简单）— **[App Store 下载](https://apps.apple.com/us/app/uhella/id6737429973)**。和 Mac 连同一个 Wi-Fi，打开 App 它就会**自动找到你的后端** — 什么都不用配。（也可以手动输入一次 Mac 的名称或 IP。）
+**在家里，和 Mac 连同一个 Wi-Fi 时，[Uhella iPhone App](https://apps.apple.com/us/app/uhella/id6737429973) 直接就能用** — 打开它就会**自动找到你的 Mac**，什么都不用配置。（也可以手动输入一次 Mac 的名称或 IP。）
 
-想在外面也能用？在 iPhone 和 Mac 上都装上免费的 **[Tailscale](https://tailscale.com)** 并登录 — 设置就这么多。之后你的手机在任何地方都能安全地连回家里的 Mac。
+想在**出门在外**时也能访问照片？这就是远程访问要解决的问题。从下面任选一种 —— 或者都不用，只在家里用 Uhella 也完全没问题：
 
-**② Telegram**（喜欢聊天式操作的话，约 4 分钟）：用 **@BotFather** 创建机器人，把 token 粘贴进 *Configure Telegram…*，就可以开聊：
+**① Tailscale — 完整 App，随处可用。** 在 iPhone 和 Mac 上都安装免费的 **[Tailscale](https://tailscale.com)**，用同一个账号登录 — 设置就这么多。之后 Uhella App 会从任何地方安全地连回你的 Mac，不只是在家里。
+
+**② Telegram — 聊天式访问，随处可用**（喜欢聊天式操作的话，约 4 分钟）：用 **@BotFather** 创建机器人，把 token 粘贴进菜单栏 App 里的 *Configure Telegram…*，就可以开聊：
 
 > `狮子` · `Nairobi 2025` · `马达加斯加一共有多少张照片？` · `more` · `similar`
 
 完整教程：**[Telegram 设置指南](uhella_telegram_guide.md)** · 演示视频：**[YouTube](https://www.youtube.com/watch?v=K22UKcL3UnM)**
+
+**③ 静态 IP / 本地地址 — 手动兜底方式，仅限家里 Wi-Fi。** 在菜单栏 App 中打开 **Remote Access → Local Network (Static IP)…**，可以看到 Mac 的名称和地址；如果自动发现没找到，就手动输入到 iPhone App 的服务器选择器里。
 
 ## 常见问题
 

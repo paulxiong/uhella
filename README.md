@@ -70,7 +70,9 @@ iCloud 2 TB costs about **$120 every year**. A hard drive you probably already o
 3. A **step-by-step setup window** takes over: it downloads the local AI models (~7 GB, one time, with progress bars). No terminal, no config files.
 4. When macOS asks, allow **Photos access**, **Full Disk Access**, and **Accessibility** — Uhella shows you exactly where to click for each.
 
-That's it. Uhella keeps itself updated automatically from then on.
+That's it — Uhella keeps itself updated automatically from then on, and the iPhone app already works over your home Wi-Fi with zero extra setup.
+
+> **Remote access (below) is entirely optional.** You don't need to touch it — Uhella works fully at home either way, and **Auto Archive and everything else running on your Mac keep working regardless of whether you ever set up remote access.** Set it up only if you also want to reach your photos in the iPhone app when you're away from home.
 
 ## Using it
 
@@ -83,17 +85,21 @@ Uhella lives in your **menu bar**:
 - **Telegram Bot / Configure Telegram** — set up phone access
 - **Check for Updates**, **Start at Login**, **Keep Awake**
 
-### On your phone — two ways
+### On your phone
 
-**① The Uhella iPhone app** (easiest) — **[get it on the App Store](https://apps.apple.com/us/app/uhella/id6737429973)**. Open it on the same Wi-Fi as your Mac and it **finds your backend automatically** — nothing to configure. (You can also type your Mac's name or IP once, if you prefer.)
+**At home, on the same Wi-Fi as your Mac, the [Uhella iPhone app](https://apps.apple.com/us/app/uhella/id6737429973) just works** — open it and it **finds your Mac automatically**, nothing to configure. (You can also type your Mac's name or IP once, if you prefer.)
 
-Want it to work away from home too? Install the free **[Tailscale](https://tailscale.com)** app on both your iPhone and your Mac and sign in — that's the whole setup. Your phone then reaches your Mac securely from anywhere.
+Want to reach your photos when you're **away from home** too? That's what remote access is for. Pick whichever of these fits you — or skip all of them and keep using Uhella at home only:
 
-**② Telegram** (great for chat lovers, ~4 minutes): create a bot with **@BotFather**, paste the token into *Configure Telegram…*, and start chatting:
+**① Tailscale — the full app, from anywhere.** Install the free **[Tailscale](https://tailscale.com)** app on both your iPhone and your Mac and sign in with the same account on each — that's the whole setup. The Uhella app then reaches your Mac securely from anywhere, not just at home.
+
+**② Telegram — chat access, from anywhere** (great for chat lovers, ~4 minutes): create a bot with **@BotFather**, paste the token into *Configure Telegram…* in the menu bar app, and start chatting:
 
 > `lions` · `Nairobi 2025` · `how many photos from Madagascar?` · `more` · `similar`
 
 Full walkthrough: **[Telegram setup guide](uhella_telegram_guide.md)** · Demo: **[YouTube](https://www.youtube.com/watch?v=K22UKcL3UnM)**
+
+**③ Static IP / local address — a manual fallback, home Wi-Fi only.** In the menu bar app, open **Remote Access → Local Network (Static IP)…** to see your Mac's name and address, and type it into the iPhone app's server picker if auto-discovery ever doesn't find it on its own.
 
 ## FAQ
 
