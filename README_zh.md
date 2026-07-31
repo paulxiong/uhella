@@ -78,7 +78,7 @@ iCloud 2 TB 每年约 **$120**。而你手边多半已经有一块硬盘，能�
 
 Uhella 常驻**菜单栏**：
 
-<img src="menu.png" alt="Uhella 菜单栏" width="360" />
+<img src="截屏2026-07-30 14.26.29.png" alt="Uhella 菜单栏" width="360" />
 
 - **Auto Archive** — 设置「最多保留 N 张」上限
 - **Photo Library** — 切换图库、重建索引、清理缓存
